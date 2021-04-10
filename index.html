@@ -1,35 +1,140 @@
-<html>
-      <head>
-        <meta charset="UTF-8">
-        <title>index.md</title>
-      </head>
-      <body>
-        <h2 id="welcome-to-github-pages">Welcome to GitHub Pages</h2>
-<p>You can use the <a href="https://github.com/fortytrom/travel/edit/gh-pages/index.md">editor on GitHub</a> to maintain and preview the content for your website in Markdown files.</p>
-<p>Whenever you commit to this repository, GitHub Pages will run <a href="https://jekyllrb.com/">Jekyll</a> to rebuild the pages in your site, from the content in your Markdown files.</p>
-<h3 id="markdown">Markdown</h3>
-<p>Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for</p>
-<pre><code class="lang-markdown">Syntax highlighted code block
+<!DOCTYPE html>
+<html lang="en">
 
-# Header 1
-## Header 2
-### Header 3
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增旅遊套票</title>
+    <!-- css引入 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css' />
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
 
-- Bulleted
-- List
+<body>
+    <section class="section">
+        <div class="main main_xs">
+            <div class="g_addticket">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="row align-items-center">
+                            <div class="col-7 col-md-12">
+                                <img src="images/undraw_Traveling_re_weve@2x.png">
+                            </div>
+                            <div class="col-5 col-md-12">
+                                <img src="images/undraw_Traveling_re_weve_txt@2x.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1 class="page_title">
+                            <span class="title_icon"><i class="fas fa-plus"></i></span>
+                            <span>新增旅遊套票</span>
+                        </h1>
+                        <form action="" class="form form_quiet">
+                            <ul>
+                                <li class="g_form_item">
+                                    <label class="form-label" for="ticketName">套票名稱</label>
+                                    <div class="form-control">
+                                        <input class="input" type="text" placeholder="請填寫套票名稱"
+                                            id="ticketName">
+                                            <p class="alert">lorem</p>
+                                    </div>
+                                </li>
+                                <li class="g_form_item">
+                                    <label class="form-label" for="ticketImgUrl">圖片網址</label>
+                                    <div class="form-control">
+                                        <input class="input" type="text" placeholder="請填寫圖片網址"
+                                            id="ticketImgUrl">
+                                            <p class="alert">lorem</p>
+                                    </div>
+                                </li>
+                                <li class="g_form_item">
+                                    <label class="form-label" for="ticketArea">景點地區</label>
+                                    <div class="form-control select">
+                                        <select name="ticketArea" id="ticketArea">
+                                            <option disabled selected hidden>請選擇景點地區</option>
+                                            <option value="台北">台北</option>
+                                            <option value="台中">台中</option>
+                                            <option value="高雄">高雄</option>
+                                        </select>
+                                        <p class="alert">lorem</p>
+                                    </div>
+                                </li>
+                                <li class="g_form_item">
+                                    <label class="form-label" for="ticketPrice">套票金額</label>
+                                    <div class="form-control">
+                                        <input class="input" type="number" placeholder="請填寫套票金額"
+                                            id="ticketPrice">
+                                            <p class="alert">lorem</p>
+                                    </div>
+                                </li>
+                                <li class="g_form_item">
+                                    <label class="form-label" for="ticketRemaining">套票組數</label>
+                                    <div class="form-control">
+                                        <input class="input" type="text" placeholder="請填寫套票組數"
+                                            id="ticketRemaining">
+                                            <p class="alert">lorem</p>
+                                    </div>
+                                </li>
+                                <li class="g_form_item">
+                                    <label class="form-label" for="ticketScore">套票星級</label>
+                                    <div class="form-control">
+                                        <input class="input" type="text" placeholder="請填寫套票星級"
+                                            id="ticketScore">
+                                            <p class="alert">lorem</p>
+                                    </div>
+                                </li>
+                                <li class="g_form_item">
+                                    <label class="form-label" for="">套票描述</label>
+                                    <div class="form-control">
+                                        <textarea rows="5" class="input" type="text" placeholder="請填寫套票描述（限 100 字）"
+                                            id="ticketIntroduction"></textarea>
+                                            <p class="alert">lorem</p>
+                                    </div>
+                                </li>
+                                <li class="g_form_item justify-content-end">
+                                    <button class="button button_primary" id="ticketSubmit" type="reset">新增套票</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section_gray">
+        <div class="main main_xs mb_52">
+            <div class="form_noquiet row align-content-center align-items-start">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="form-control select">
+                        <select name="" id="filter">
+                            <option disabled selected hidden>地區搜尋</option>
+                            <option value="全部地區">全部地區</option>
+                            <option value="台北">台北</option>
+                            <option value="台中">台中</option>
+                            <option value="高雄">高雄</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 search_result">本次搜尋共 <span id="search_total"></span> 筆資料</div>
+                <div class="col-12 col-md-12 col-lg-4 mb_40">
+                  <div id="chart" class="chart"></div>
+                </div>
+              </div>
+        </div>
+        <div class="main">
+            <ul class="travelCard_list row">
+            </ul>
+        </div>
+    </section>
+    <!-- js引入 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js' ></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js' ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="js/web_function.js"></script>
+</body>
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-</code></pre>
-<p>For more details see <a href="https://guides.github.com/features/mastering-markdown/">GitHub Flavored Markdown</a>.</p>
-<h3 id="jekyll-themes">Jekyll Themes</h3>
-<p>Your Pages site will use the layout and styles from the Jekyll theme you have selected in your <a href="https://github.com/fortytrom/travel/settings">repository settings</a>. The name of this theme is saved in the Jekyll <code>_config.yml</code> configuration file.</p>
-<h3 id="support-or-contact">Support or Contact</h3>
-<p>Having trouble with Pages? Check out our <a href="https://docs.github.com/categories/github-pages-basics/">documentation</a> or <a href="https://support.github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-
-      </body>
-    </html>
+</html>
