@@ -1,0 +1,119 @@
+
+.g_form_item{
+    display: flex;
+    align-items: flex-start;
+    .form-label{
+        flex: 0 0 95px;
+        display: block;
+        color: $color_main;
+        padding-right: 30px;
+        padding-top: .6rem;
+    }
+    &+.g_form_item{
+        margin-top: 1.6rem;
+    }
+}
+
+.form-control{
+    width: 100%;
+}
+::placeholder {
+    color: $gray_06;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input,select,textarea{
+    display: inline-block;
+    width: 100%;
+    padding: 8px 12px;
+    line-height: 2.2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+	font-family: 'Roboto','Noto Sans TC', 'Microsoft JhengHei', Helvetica, sans-serif;
+}
+
+.form_quiet{
+    input,select,textarea{
+        background-color: $gray_01;
+        border-radius: 4px 4px 0 0;
+        border-bottom: 1px solid $color_main;
+        border-top: 1px solid $gray_01;
+        border-left: none;
+        border-right: none;
+    }
+}
+.form_noquiet{
+    input,select,textarea{
+        border: 1px solid #CED4DA;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+}
+.select{
+    position: relative;
+   &::after{
+       content: "";
+       width: 12px;
+       height: 12px;
+       background: url(#{$image_path}icon_sort.svg) no-repeat;
+       background-size: contain;
+       display: block;
+       position: absolute;
+       top: 14px;
+       right: 5px;
+   }
+}
+select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    padding-right: 20px;
+    
+}
+
+.button{
+    width: 100%;
+    font-size: 2rem;
+    line-height: 4.8rem;
+    height: 4.8rem;
+    border-radius: 5px;
+    padding: 0px 20px;
+    font-weight: 300;
+    @media (min-width: $md){
+        width: auto;
+        min-width: 160px;
+        float: right;
+    }
+}
+
+.button_primary{
+    background-color: $color_main;
+    color: #fff;
+    transition: .2s;
+    &:hover{  
+        background-color: darken($color_main, 5);
+    }
+}
+
+.alert{
+    color: #ef5050;
+    display: none;
+}
+
+.search_result{
+    color: $gray_06;
+    line-height: 4rem;
+}

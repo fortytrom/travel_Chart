@@ -1,0 +1,146 @@
+@import "_mixin.scss";
+@import "_extend.scss";
+.section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &:first-child{
+        padding-top: 20px;
+    }
+    &:last-child{
+        padding-bottom: 20px;
+    }
+    @media (min-width: $md){
+        padding-top: 56px;
+        padding-bottom: 100px;
+        &:first-child{
+            padding-top: 120px;
+        }
+        &:last-child{
+            padding-bottom: 120px;
+        }
+    }
+}
+.section.section_gray{
+    background-color: $gray_02;
+}
+
+.g_addticket{
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.29);
+    @media (min-width: $md){
+        padding: 60px 95px;
+    }
+}
+
+.page_title{
+    color: $color_main;
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    border-bottom: 3px solid $color_main;
+    font-weight: 500;
+    padding-bottom: 4px;
+    margin-bottom: 3.2rem;
+    span{
+        vertical-align: middle;
+    }
+    .title_icon{
+        border-radius: 50%;
+        border: 2px solid $color_main;
+        width: 20px;
+        height: 20px;
+        line-height: 1.6rem;
+        font-size: 12px;
+        text-align: center;
+        display: inline-block;
+    }
+}
+.travelCard_list{
+    .item{
+        margin-bottom: 3.8rem;
+    }
+}
+.g_travelCard{
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,.29);
+    position: relative;
+    transition:  transform .4s ease,box-shadow .4s ease;
+    .cover{
+        border-radius: 4px 4px 0 0;
+        width: 100%;
+        background-color: #FAFAFA;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        overflow: hidden;
+        .pb{
+            transition: transform .5s ease;
+            padding-bottom: 180/350*100%;
+        }
+    }
+    .info{
+        padding: 20px;
+        position: relative;
+    }
+    &:hover{  
+        box-shadow: 0 3px 12px rgba(0,0,0,.2);
+        transform: scale(1.02);
+        .pb{
+            transform: scale(1.1);
+        }
+    }
+}
+.tag_area{
+    position: absolute;
+    background-color: $color_secondary;
+    font-size: 20px;
+    left: 0px;
+    color:#fff;
+    padding: 6px 20px;
+    top: -12px;
+    border-radius: 0 4px 4px 0;
+    z-index: 2;
+}
+.tag_scroe{
+    position: absolute;
+    background-color: $color_main;
+    left: 0px;
+    color:#fff;
+    padding: 4px 8px;
+    top: -16px;
+    border-radius: 0 4px 4px 0;
+}
+
+.g_price{
+    font-weight: 400;
+    span{
+        vertical-align: middle;
+    }
+    .price{
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        padding-bottom: 2px;
+        display: inline-block;
+    }
+}
+.info_title{
+    color: $color_main;
+    font-size: 2.4rem;
+    border-bottom: 2px solid $color_main;
+    padding-bottom: .4rem;
+    margin-bottom: 1.6rem;
+    font-weight: 500;
+    line-height: 3.3rem;
+}
+.info_introdution{
+    color: $gray_06;
+    margin-bottom: 3.2rem;
+    @media (min-width: $lg){
+        min-height: 150px;
+    }
+}
+
+.chart{
+    text-align: center;
+}

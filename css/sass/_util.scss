@@ -1,0 +1,47 @@
+.mb_40{
+    margin-bottom: 40px;
+}
+
+.clearfix:after { /* FF, IE8, O, S, etc. */
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+   }
+.clearfix{
+   zoom:1;
+   }
+.fleft{
+   float: left;
+}
+.fright{
+   float: right;
+}
+img{
+    max-width: 100%;
+}
+
+// main
+.main{
+    max-width: 1190px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: $md){
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &.main_xs{
+        max-width: 1000px;
+    }
+}
+
+// font-color
+.font_main{
+    color: $color_main;
+}
+.text_right{
+    text-align: right;
+}
